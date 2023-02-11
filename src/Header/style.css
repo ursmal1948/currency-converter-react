@@ -1,0 +1,6 @@
+.header {
+    display: flex;
+    justify-content: center;
+    color: hsl(180, 100%, 30%);
+    padding: 10px;
+}
