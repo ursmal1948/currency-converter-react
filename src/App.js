@@ -1,10 +1,9 @@
-import React from 'react';
-import Section from "./Section"
+import React, { useState } from 'react';
 import Container from "./Container";
 import Header from "./Header";
-import Button from "./Button";
 import Form from "./Form";
 import Result from "./Result";
+import { currencies } from './currencies';
 
 
 
@@ -19,7 +18,6 @@ function App() {
     placeholder: "Wpisz kwotę w zł",
     required: true,
     min: "1",
-    step: "0.01",
   }
 
   const selectAttributes = {
@@ -27,30 +25,35 @@ function App() {
     name: "currency",
   }
 
+  const [result, setResult] = useState();
+
+  const calculateResult = (amount, currency) => {
+
+
+    setResult({
+      initialAmount:amount,
+      resultAmount:amount * //rate,
+      currency,
+
+
+    }
+    )
+
+
+
+  }
+
   return (
     <Container>
       <Header
         title="Przelicznik walut"
       />
-      
-      <form className="form">
-        <Section
-          title="Waluta:"
-          body={
-            <select {...selectAttributes}>
-              <option>NOK</option>
-              <option>USD</option>
-            </select>
-          }
-        />
-        <Section
-          title="Kwota:"
-          body={
-            <input {...inputAttributes} />
-          }
-        />
-        <Button />
-      </form>
+
+      <Form
+        selectAttributes={selectAttributes}
+        inputAttributes={inputAttributes}
+      />
+
       <Result />
     </Container>
   );
