@@ -1,6 +1,6 @@
 const Result = () => (
     <p>
-        <strong>5as</strong>
+        <strong>Kwota po przeliczeniu</strong>
 
     </p>
 );
