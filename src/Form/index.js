@@ -11,7 +11,7 @@ const Form = ({ selectAttributes, inputAttributes }) => {
 
     const onFormSubmit = (event) => {
         event.preventDefault();
-        calculateResult(amount, currency)
+        // calculateResult(amount, currency)
     }
 
 
