@@ -27,21 +27,21 @@ function App() {
 
   const [result, setResult] = useState();
 
-  // const calculateResult = (amount, currency) => {
+  const calculateResult = (amount, currency) => {
 
 
-  //   setResult({
-  //     initialAmount:amount,
-  //     resultAmount:amount * //rate,
-  //     currency,
+    setResult({
+      initialAmount:amount,
+      resultAmount:amount * rate,
+      currency,
 
 
-  //   }
-  //   )
+    }
+    )
 
 
 
-  // }
+  }
 
   return (
     <Container>
