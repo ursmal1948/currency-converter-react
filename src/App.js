@@ -47,7 +47,7 @@ function App() {
   return (
     <Container>
       <Header
-        title="Przelicznik walut"
+        title="Kalkulator walutowy"
       />
 
       <Form
