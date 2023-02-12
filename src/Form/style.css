@@ -2,8 +2,9 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    margin:10px;
+    margin: 10px;
 }
+
 
 .form__labelText {
     flex-basis: 90px;
@@ -11,8 +12,7 @@
 }
 
 .form__field {
-    flex-basis: auto;
-    padding: 2px 10px;
+    padding: 3px 10px;
     margin-left: 10px;
 }
 
@@ -23,16 +23,23 @@
 .form__button {
     display: flex;
     justify-content: center;
-    justify-self: center;
     width: 80%;
     padding: 8px 0;
-    margin: 25px 50px;
+    margin: 25px 50px 0 50px;
     background-color: hsl(180, 100%, 30%);
     border: none;
     border-radius: 5px;
     color: aliceblue;
+    font-weight: 500;
     transition: 1s;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+@media(max-width:767px) {
+    .form__button {
+        width: 80%;
+        margin-left: 35px
+    }
 }
 
 .form__button:hover {
