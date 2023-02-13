@@ -34,6 +34,16 @@ Currency Converter project is made the project made within the course Frontend D
  - React
 
 
+ ## Example values taken from currency converter
+ > Note: rounded to one decimal places
+ 
+PLN | Currency chosen | Converted value in chosen currency 
+--- | --- | --- |
+5 | EUR | 1.1 EUR |
+10 | NOK | 22.6 NOK |
+15 | USD | 3.3 USD |
+25 | GBP | 4.5 GBP |
+
 ## Available Scripts
 
 In the project directory, you can run:
