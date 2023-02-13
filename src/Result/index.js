@@ -1,8 +1,23 @@
-const Result = () => (
-    <p>
-        <strong>Kwota po przeliczeniu</strong>
+import "./style.css"
+import React from "react";
 
-    </p>
-);
+const Result = ({ result }) => {
+
+    return (
+        result.initialAmount && (
+            <React.Fragment>
+                <p className="result">
+                    {result.initialAmount} PLN =
+                    <strong>
+                        {result.resultAmount} {result.currency}
+                    </strong>
+
+                </p>
+
+
+            </React.Fragment>
+        )
+    )
+};
 
 export default Result;
