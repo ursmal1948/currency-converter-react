@@ -9,7 +9,7 @@ const Result = ({ result }) => {
                 <p className="result">
                     {result.initialAmount} PLN =
                     <strong>
-                        {result.resultAmount} {result.currency}
+                        {result.resultAmount.toFixed(1)} {result.currency}
                     </strong>
 
                 </p>
