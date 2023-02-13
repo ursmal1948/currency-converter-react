@@ -23,6 +23,16 @@ Currency Converter project is made the project made within the course Frontend D
 <img src="https://github.com/ursmal1948/currency-converter-react/blob/main/public/animation__currencyConverter.gif" width="700px">
 
 
+ ## Example values taken from currency converter
+ > Note: rounded to one decimal places
+ 
+PLN | Currency chosen | Converted value in chosen currency 
+--- | --- | --- |
+5 | EUR | 1.1 EUR |
+10 | NOK | 22.6 NOK |
+15 | USD | 3.3 USD |
+25 | GBP | 4.5 GBP |
+
  ## Tools used in this project
  - HTML
  - JavaScript
@@ -33,16 +43,6 @@ Currency Converter project is made the project made within the course Frontend D
  - ES6 + Features
  - React
 
-
- ## Example values taken from currency converter
- > Note: rounded to one decimal places
- 
-PLN | Currency chosen | Converted value in chosen currency 
---- | --- | --- |
-5 | EUR | 1.1 EUR |
-10 | NOK | 22.6 NOK |
-15 | USD | 3.3 USD |
-25 | GBP | 4.5 GBP |
 
 ## Available Scripts
 
