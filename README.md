@@ -4,7 +4,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Demo
-Feel free to visit my [website] (https://ursmal1948.github.io/currency-converter-react/). Hope you enjoy it!
+Feel free to visit my [website](https://ursmal1948.github.io/currency-converter-react/). Hope you enjoy it!
 
 ## Description
 Currency Converter project is made the project made within the course Frontend Developer at online programming school YouCode. This app allows you to convert money from PLN to other selected currencies.
