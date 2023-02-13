@@ -2,7 +2,7 @@ import "./style.css"
 import { useState } from "react";
 import { currencies } from "../currencies"
 
-const Form = ({ selectAttributes, inputAttributes }) => {
+const Form = ({ selectAttributes, inputAttributes, calculateResult }) => {
 
 
     const [currency, setCurrency] = useState(currencies[0].shortName);
@@ -11,7 +11,7 @@ const Form = ({ selectAttributes, inputAttributes }) => {
 
     const onFormSubmit = (event) => {
         event.preventDefault();
-        // calculateResult(amount, currency)
+        calculateResult(amount, currency)
     }
 
 
@@ -47,7 +47,7 @@ const Form = ({ selectAttributes, inputAttributes }) => {
                 />
             </label>
 
-            <p>
+            <p className="button__paragraph">
                 <button className="form__button">Przelicz</button>
             </p>
 

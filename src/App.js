@@ -18,6 +18,7 @@ function App() {
     placeholder: "Wpisz kwotę w zł",
     required: true,
     min: "1",
+    step: "0.01",
   }
 
   const selectAttributes = {
@@ -25,24 +26,20 @@ function App() {
     name: "currency",
   }
 
-  const [result, setResult] = useState();
+  const [result, setResult] = useState("");
 
-  // const calculateResult = (amount, currency) => {
+  const calculateResult = (amount, currency) => {
 
-    
+    const rate = currencies.find(({ shortName }) => shortName === currency).rate
 
-  //   setResult({
-  //     initialAmount:amount,
-  //     resultAmount:amount * rate,
-  //     currency,
+    return (
 
-
-  //   }
-  //   )
-
-
-
-  // }
+      setResult({
+        initialAmount: amount,
+        resultAmount: amount * rate,
+        currency:currency,
+      }))
+  }
 
   return (
     <Container>
@@ -53,9 +50,13 @@ function App() {
       <Form
         selectAttributes={selectAttributes}
         inputAttributes={inputAttributes}
+        calculateResult={calculateResult}
       />
 
-      <Result />
+      <Result
+        result={result}
+        calculateResult={calculateResult}
+      />
     </Container>
   );
 }
