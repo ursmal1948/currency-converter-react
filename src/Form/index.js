@@ -53,9 +53,7 @@ const Form = ({ selectAttributes, inputAttributes, calculateResult }) => {
             </p>
 
         </form>
-    )
-
-
+    );
 };
 
 export default Form;
