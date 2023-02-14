@@ -6,8 +6,6 @@ import Result from "./Result";
 import { currencies } from './currencies';
 
 
-
-
 function App() {
 
 
@@ -37,7 +35,7 @@ function App() {
       setResult({
         initialAmount: amount,
         resultAmount: amount * rate,
-        currency:currency,
+        currency: currency,
       }))
   }
 
