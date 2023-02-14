@@ -7,7 +7,7 @@ const Result = ({ result }) => (
             <p className="result">
                 {result.initialAmount} PLN =
                 <strong>
-                    {result.resultAmount.toFixed(1)} {result.currency}
+                    &nbsp;{result.resultAmount.toFixed(1)} {result.currency}
                 </strong>
             </p>
         </React.Fragment>
