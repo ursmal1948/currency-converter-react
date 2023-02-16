@@ -2,12 +2,13 @@ import "./style.css"
 import React from "react";
 
 const Result = ({ result }) => (
+
     result.initialAmount && (
         <React.Fragment>
             <p className="result">
-                {result.initialAmount} PLN =
+                {result.initialAmount.toFixed(2)}&nbsp;PLN&nbsp;=
                 <strong>
-                    &nbsp;{result.resultAmount.toFixed(1)} {result.currency}
+                    &nbsp;{result.resultAmount.toFixed(2)} {result.currency}
                 </strong>
             </p>
         </React.Fragment>
