@@ -16,7 +16,7 @@ function App() {
     placeholder: "Wpisz kwotę w zł",
     required: true,
     min: "1",
-    step: "0.01",
+    step:"any",
   }
 
   const selectAttributes = {
