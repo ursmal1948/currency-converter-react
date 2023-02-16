@@ -18,7 +18,7 @@ const Form = ({ selectAttributes, inputAttributes, calculateResult }) => {
             onSubmit={onFormSubmit}
             className="form">
             <label className="form__label">
-                <span className="form__labelText"> Waluta:</span>
+                Waluta:
                 <select {...selectAttributes}
                     value={currency}
                     onChange={
@@ -35,7 +35,7 @@ const Form = ({ selectAttributes, inputAttributes, calculateResult }) => {
                 </select>
             </label>
             <label className="form__label">
-                <span className="form__labelText"> Kwota:</span>
+                Kwota:
                 <input
                     value={amount}
                     {...inputAttributes}
