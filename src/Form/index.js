@@ -3,11 +3,8 @@ import { useState } from "react";
 import { currencies } from "../currencies"
 
 const Form = ({ selectAttributes, inputAttributes, calculateResult }) => {
-
-
     const [currency, setCurrency] = useState(currencies[0].shortName);
     const [amount, setAmount] = useState("");
-
 
     const onFormSubmit = (event) => {
         event.preventDefault();
