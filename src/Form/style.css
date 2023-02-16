@@ -1,14 +1,24 @@
 .form__label {
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 150px 210px;
     justify-content: flex-start;
+    align-items: center;
     margin: 10px;
+    margin-left: 55px;
 }
 
-
-.form__labelText {
-    flex-basis: 90px;
-    margin: 5px;
+@media (max-width:320px) {
+    .form__label {
+        margin-left: 7px;
+        grid-template-columns: 70px 160px ;
+    }
+}
+@media (min-width:321px) and (max-width:767px) {
+    .form__label {
+        grid-template-columns: 90px 170px;
+        gap: 5px;
+        margin-left: 40px;
+    }
 }
 
 .form__field {
@@ -34,17 +44,25 @@
     transition: 1s;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
-
-.button__paragraph {
-    padding-bottom:30px;
-}
-
-@media(max-width:767px) {
+@media (max-width:320px) {
     .form__button {
-        width: 80%;
-        margin-left: 35px
+        max-width: 80%;
+        margin-left: 25px
     }
 }
+
+@media (min-width:321px) and (max-width:767px) {
+    .form__button {
+        margin-left: 40px;
+        max-width: 90%;
+    }
+} 
+
+
+.button__paragraph {
+    padding-bottom: 30px;
+}
+
 
 .form__button:hover {
     background-color: rgb(188, 77, 203);
