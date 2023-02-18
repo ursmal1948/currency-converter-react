@@ -3,7 +3,7 @@ import React from "react";
 
 const Result = ({ result }) => (
 
-    result.initialAmount && (
+    !!result && (
         <React.Fragment>
             <p className="result">
                 {result.initialAmount.toFixed(2)}&nbsp;PLN&nbsp;=
