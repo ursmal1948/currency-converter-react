@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Container from "./Container";
 import Header from "./Header";
 import Form from "./Form";
@@ -16,7 +16,7 @@ function App() {
     placeholder: "Wpisz kwotę w zł",
     required: true,
     min: "1",
-    step:"any",
+    step: "any",
   }
 
   const selectAttributes = {
@@ -39,10 +39,46 @@ function App() {
       }))
   }
 
+  const [date, setDate] = useState(`${new Date()}`);
+
+  const refreshDate = () => {
+    setDate(new Date());
+  }
+
+  useEffect(() => {
+    setInterval(() => {
+      refreshDate()
+    }, 1000)
+  }, [])
+
+
+
+  //  useEffect(() => {
+  //     setInterval(() =>  {}
+  //       // setTime(new Date())
+  //     }, 1000)
+  //  }, [time])
+
+
+  // setInterval(() => {
+  //   setTime()
+  // console.log(time)
+  // }, 3000)
+
+  // useEffect(() => {
+  //   setInterval(() => {
+  //     setTime()
+  //   }, 1000)
+  // }, [time])
+
+
+
+
   return (
     <Container>
       <Header
         title="Kalkulator walutowy"
+        date={date}
       />
 
       <Form

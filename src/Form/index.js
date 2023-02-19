@@ -1,5 +1,5 @@
 import "./style.css"
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { currencies } from "../currencies"
 
 const Form = ({ selectAttributes, inputAttributes, calculateResult }) => {
@@ -10,8 +10,7 @@ const Form = ({ selectAttributes, inputAttributes, calculateResult }) => {
         event.preventDefault();
         calculateResult(amount, currency)
         setAmount("");
-    }
-
+    }   
 
     return (
         <form
