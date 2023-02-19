@@ -42,7 +42,7 @@ function App() {
   const [date, setDate] = useState(`${new Date()}`);
 
   const refreshDate = () => {
-    setDate(new Date());
+    setDate(`${new Date()}`);
   }
 
   useEffect(() => {
@@ -52,8 +52,7 @@ function App() {
     return () => {
       clearInterval(intervalId)
     };
-  }, [])
-
+  }, [date])
 
 
   //  useEffect(() => {
