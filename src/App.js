@@ -46,9 +46,12 @@ function App() {
   }
 
   useEffect(() => {
-    setInterval(() => {
-      refreshDate()
-    }, 1000)
+    const intervalId = setInterval(() => {
+      refreshDate();
+    }, 1000);
+    return () => {
+      clearInterval(intervalId)
+    };
   }, [])
 
 
