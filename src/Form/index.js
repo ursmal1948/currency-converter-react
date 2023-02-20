@@ -1,16 +1,31 @@
 import "./style.css"
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { currencies } from "../currencies"
 
-const Form = ({ selectAttributes, inputAttributes, calculateResult }) => {
+const Form = ({ calculateResult }) => {
     const [currency, setCurrency] = useState(currencies[0].shortName);
     const [amount, setAmount] = useState("");
 
     const onFormSubmit = (event) => {
         event.preventDefault();
-        calculateResult(amount, currency)
+        calculateResult(amount, currency);
         setAmount("");
-    }   
+    }
+
+    const inputAttributes = {
+        className: "form__field",
+        type: "number",
+        name: "amount",
+        placeholder: "Wpisz kwotę w zł",
+        required: true,
+        min: "1",
+        step: "any",
+    }
+
+    const selectAttributes = {
+        className: "form__field",
+        name: "currency",
+    }
 
     return (
         <form
@@ -43,11 +58,9 @@ const Form = ({ selectAttributes, inputAttributes, calculateResult }) => {
                     }
                 />
             </label>
-
             <p className="button__paragraph">
                 <button className="form__button">Przelicz</button>
             </p>
-
         </form>
     );
 };
