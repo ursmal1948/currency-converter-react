@@ -4,6 +4,7 @@ import Header from "./Header";
 import Form from "./Form";
 import Result from "./Result";
 import { currencies } from './currencies';
+import Clock from "./Clock";
 
 function App() {
 
@@ -21,26 +22,11 @@ function App() {
       }))
   };
 
-  const [date, setDate] = useState(new Date());
-
-  const updateDate = () => {
-    setDate(new Date());
-  };
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      updateDate();
-    }, 1000);
-    return () => {
-      clearInterval(intervalId)
-    };
-  }, [])
-
   return (
     <Container>
+      <Clock/>
       <Header
         title="Kalkulator walutowy"
-        date={date}
       />
       <Form
         calculateResult={calculateResult}
