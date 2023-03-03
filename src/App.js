@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import Container from "./Container";
-import Header from "./Header";
+import React, { useState } from 'react';
 import Form from "./Form";
 import Result from "./Result";
 import { currencies } from './currencies';
-import Clock from "./Clock";
+import {StyledClock} from "./Clock/styled"
+import { StyledHeader } from './Header/styled';
+import { StyledContainer } from './Container/styled';
 
 function App() {
 
@@ -23,9 +23,9 @@ function App() {
   };
 
   return (
-    <Container>
-      <Clock/>
-      <Header
+    <StyledContainer>
+      <StyledClock/>
+      <StyledHeader
         title="Kalkulator walutowy"
       />
       <Form
@@ -35,7 +35,7 @@ function App() {
         result={result}
         calculateResult={calculateResult}
       />
-    </Container>
+    </StyledContainer>
   );
 }
 
