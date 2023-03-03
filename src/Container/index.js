@@ -1,7 +1,6 @@
-import "./style.css";
 
-const Container = ({ children }) => (
-    <div className="container">
+const Container = ({ children, className }) => (
+    <div className={className}>
         {children}
     </div>
 );
