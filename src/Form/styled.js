@@ -43,4 +43,24 @@ export const Button = styled.button`
     background-color: rgb(188, 77, 203);
     scale: 1.1;
   }
+
+  @media (max-width: 320px) {
+    max-width: 80%;
+    margin-left: 25px;
+  }
+
+  @media (min-width: 321px) and (max-width: 767px) {
+    margin-left: 40px;
+    max-width: 90%;
+  }
+`;
+
+export const Field = styled.input`
+  padding: 3px 10px;
+  margin-left: 10px;
+`;
+
+export const FieldSelect = styled.select`
+  padding: 3px 10px;
+  margin-left: 10px;
 `;

@@ -1,7 +1,6 @@
-import "./style.css";
 import { useState, useRef } from "react";
 import { currencies } from "../currencies";
-import { Label, Paragraph, Button } from "./styled";
+import { Label, Paragraph, Button, Field, FieldSelect } from "./styled";
 
 const Form = ({ calculateResult }) => {
   const [currency, setCurrency] = useState(currencies[0].shortName);
@@ -22,7 +21,7 @@ const Form = ({ calculateResult }) => {
     <form onSubmit={onFormSubmit}>
       <Label>
         Waluta:
-        <select
+        <FieldSelect
           className="form__field"
           name="currency"
           value={currency}
@@ -32,11 +31,11 @@ const Form = ({ calculateResult }) => {
             <option key={currency.id}>{currency.shortName}</option>
           ))}
           ;
-        </select>
+        </FieldSelect>
       </Label>
       <Label>
         Kwota:
-        <input
+        <Field
           ref={inputRef}
           className="form__field"
           type="number"
@@ -51,7 +50,7 @@ const Form = ({ calculateResult }) => {
       <Paragraph>
         <Button 
         onClick={focusInput}
-         className="form__button">
+        >
           Przelicz
         </Button>
       </Paragraph>
