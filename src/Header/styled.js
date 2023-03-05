@@ -4,7 +4,7 @@ import Header from ".";
 export const StyledHeader = styled(Header)`
   display: flex;
   justify-content: center;
-  color: hsl(180, 100%, 30%);
+  color:${({ theme }) => theme.colors.primaryColor};
   padding: 10px;
 `;
 

@@ -8,15 +8,10 @@ export const Label = styled.label`
   margin: 10px;
   margin-left: 55px;
 
-  @media (max-width: 320px) {
-    margin-left: 7px;
-    grid-template-columns: 70px 160px;
-  }
-
-  @media (min-width: 321px) and (max-width: 767px) {
-    grid-template-columns: 90px 170px;
-    gap: 5px;
-    margin-left: 40px;
+  @media(max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+    grid-template-columns: auto 170px;
+    justify-content:space-evenly;
+    margin-left: 15px;
   }
 `;
 
@@ -30,7 +25,7 @@ export const Button = styled.button`
   width: 80%;
   padding: 8px 0;
   margin: 25px 50px 0 50px;
-  background-color: hsl(180, 100%, 30%);
+  background-color: ${({ theme }) => theme.colors.primaryColor };
   border: none;
   border-radius: 5px;
   color: aliceblue;
@@ -40,17 +35,12 @@ export const Button = styled.button`
     rgba(0, 0, 0, 0.22) 0px 10px 10px;
 
   &:hover {
-    background-color: rgb(188, 77, 203);
+    background-color: ${({ theme }) => theme.colors.majorColor};
     scale: 1.1;
   }
 
-  @media (max-width: 320px) {
-    max-width: 80%;
-    margin-left: 25px;
-  }
-
-  @media (min-width: 321px) and (max-width: 767px) {
-    margin-left: 40px;
+  @media  (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+    margin-left: 30px;
     max-width: 90%;
   }
 `;
