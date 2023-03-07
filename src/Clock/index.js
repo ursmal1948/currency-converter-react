@@ -1,7 +1,8 @@
 import { useCurrentDate } from "./useCurrentDate";
+import { formatDate } from "./formatDate";
 
 export const Clock = ({ className }) => {
-const [date, formatDate] = useCurrentDate();
+const date = useCurrentDate();
 
   return (
     <>

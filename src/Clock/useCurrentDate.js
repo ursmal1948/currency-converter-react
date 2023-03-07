@@ -1,16 +1,6 @@
 import { useState, useEffect } from "react";
 
 export const useCurrentDate = () => {
-  const formatDate = (date) =>
-    date.toLocaleString(undefined, {
-      weekday: "long",
-      day: "numeric",
-      month: "long",
-      year: "numeric",
-      hour: "2-digit",
-      minute: "2-digit",
-      second: "numeric",
-    });
 
   const [date, setDate] = useState(new Date());
 
@@ -28,5 +18,5 @@ export const useCurrentDate = () => {
     };
   }, []);
 
-  return [date, formatDate];
+  return date;
 };
