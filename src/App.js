@@ -6,7 +6,8 @@ import { StyledClock } from "./Clock/styled";
 import { StyledHeader } from "./Header/styled";
 import { StyledContainer } from "./Container/styled";
 import { ThemeProvider } from "styled-components";
-import { theme } from "./theme";
+import { theme } from "./styles/theme";
+import { GlobalStyles } from "./styles/globalStyles";
 
 function App() {
   const [result, setResult] = useState("");
@@ -26,6 +27,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <StyledContainer>
+        <GlobalStyles />
         <StyledClock />
         <StyledHeader title="Kalkulator walutowy" />
         <Form calculateResult={calculateResult} />
