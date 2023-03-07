@@ -33,9 +33,11 @@ PLN | Currency chosen | Converted value in chosen currency
  - CSS
  - Grid
  - Flex
- - BEM
  - ES6 + Features
  - React
+ - Styled-Components
+ - ThemeProvider
+ - Media Queries
 
 
 ## Available Scripts
