@@ -1,8 +1,9 @@
+import { StyledContainer } from "./styled";
 
-const Container = ({ children, className }) => (
-    <div className={className}>
+const Container = ({ children }) => (
+    <StyledContainer>
         {children}
-    </div>
+    </StyledContainer>
 );
 
 export default Container;
