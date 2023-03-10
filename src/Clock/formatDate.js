@@ -1,5 +1,5 @@
-export const formatDate = (date) => {
-  return date.toLocaleString(undefined, {
+export const formatDate = (date) => 
+   date.toLocaleString(undefined, {
     weekday: "long",
     day: "numeric",
     month: "long",
@@ -8,4 +8,4 @@ export const formatDate = (date) => {
     minute: "2-digit",
     second: "numeric",
   });
-};
+

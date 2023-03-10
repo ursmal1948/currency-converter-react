@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import Form from "./Form";
 import Result from "./Result";
+import Container from "./Container/index"
 import { currencies } from "./currencies";
-import { StyledClock } from "./Clock/styled";
 import { StyledHeader } from "./Header/styled";
-import { StyledContainer } from "./Container/styled";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./styles/theme";
 import { GlobalStyles } from "./styles/globalStyles";
+import { Clock } from "./Clock/index"
 
 function App() {
   const [result, setResult] = useState("");
@@ -26,13 +26,13 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <StyledContainer>
+      <Container>
         <GlobalStyles />
-        <StyledClock />
+        <Clock/>
         <StyledHeader title="Kalkulator walutowy" />
         <Form calculateResult={calculateResult} />
         <Result result={result} calculateResult={calculateResult} />
-      </StyledContainer>
+        </Container>
     </ThemeProvider>
   );
 }
