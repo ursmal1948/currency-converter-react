@@ -1,15 +1,16 @@
 import { useCurrentDate } from "./useCurrentDate";
 import { formatDate } from "./formatDate";
+import { StyledClock } from "./styled.js";
 
-export const Clock = ({ className }) => {
-const date = useCurrentDate();
+export const Clock = () => {
+  const date = useCurrentDate();
 
   return (
     <>
-      <p className={className}>
-        Dzisiaj jest&nbsp;
-        {formatDate(date)}
-      </p>
+      <StyledClock>
+          Dzisiaj jest&nbsp;
+          {formatDate(date)}
+      </StyledClock>
     </>
   );
 };

@@ -1,7 +1,6 @@
 import styled from "styled-components";
-import { Clock } from ".";
 
-export const StyledClock = styled(Clock)`
+export const StyledClock = styled.p`
   text-align: end;
   padding: 15px 15px 0 0;
   font-size: 13.5px;
