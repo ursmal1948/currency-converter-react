@@ -5,7 +5,7 @@ export const StyledClock = styled.p`
   padding: 15px 15px 0 0;
   font-size: 13.5px;
   font-family: monospace;
-  color: #777;
+  color: ${({theme}) => theme.colors.boulder} ;
 
   @media
   (min-width: ${({ theme }) => theme.breakpoints.iphoneSE}px)

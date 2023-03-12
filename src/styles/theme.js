@@ -1,10 +1,13 @@
 export const theme = {
   colors: {
-    primaryColor: "hsl(180, 100%, 30%)",
-    majorColor: "rgb(188, 77, 203)",
+    persianGreen: "#009999",
+    amethyst: "#bc4dcb",
+    aliceblue: "#f0f8ff",
+    boulder: "#777777",
+    blackWhite: "#fffef3",
   },
   breakpoints: {
     mobile: 767,
-    iphoneSE:320,
+    iphoneSE: 320,
   },
 };

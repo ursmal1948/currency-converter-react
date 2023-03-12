@@ -6,6 +6,6 @@ export const FinalResult = styled.p`
   justify-content: center;
   padding-bottom: 10px;
   font-size: 20px;
-  color: ${({ theme }) => theme.colors.majorColor};
+  color: ${({ theme }) => theme.colors.amethyst};
 `;
 

@@ -25,17 +25,17 @@ export const Button = styled.button`
   width: 80%;
   padding: 8px 0;
   margin: 25px 50px 0 50px;
-  background-color: ${({ theme }) => theme.colors.primaryColor };
+  background-color: ${({ theme }) => theme.colors.persianGreen };
   border: none;
   border-radius: 5px;
-  color: aliceblue;
+  color: ${({theme}) => theme.colors.aliceblue};
   font-weight: 500;
   transition: 1s;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
     rgba(0, 0, 0, 0.22) 0px 10px 10px;
 
   &:hover {
-    background-color: ${({ theme }) => theme.colors.majorColor};
+    background-color: ${({ theme }) => theme.colors.amethyst};
     scale: 1.1;
   }
 
