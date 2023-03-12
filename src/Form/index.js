@@ -21,7 +21,8 @@ const Form = ({ calculateResult }) => {
     <form onSubmit={onFormSubmit}>
       <Label>
         Waluta:
-        <FieldSelect
+        <Field
+          as="select"
           className="form__field"
           name="currency"
           value={currency}
@@ -31,7 +32,7 @@ const Form = ({ calculateResult }) => {
             <option key={currency.id}>{currency.shortName}</option>
           ))}
           ;
-        </FieldSelect>
+        </Field>
       </Label>
       <Label>
         Kwota:

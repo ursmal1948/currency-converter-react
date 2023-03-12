@@ -49,8 +49,3 @@ export const Field = styled.input`
   padding: 3px 10px;
   margin-left: 10px;
 `;
-
-export const FieldSelect = styled.select`
-  padding: 3px 10px;
-  margin-left: 10px;
-`;
