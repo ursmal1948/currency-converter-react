@@ -36,6 +36,7 @@ PLN | Currency chosen | Converted value in chosen currency
  - ES6 + Features
  - React
  - Styled-Components
+ - Custom Hooks
  - ThemeProvider Component
  - GlobalStyle Component 
  - Media Queries
